@@ -117,7 +117,6 @@ ul{
     padding: 216px 0px 246px 0px;
 }
 .coffee-wrapper{
-    min-height: 398px;
     padding-inline: 85px;
     display: flex;
     gap: 28px;
@@ -202,6 +201,7 @@ ul{
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 86px;
+    padding-inline: 20px;
 }
 .about-card{
     max-width: 350px;
@@ -245,7 +245,13 @@ ul{
     width: 100%;
 }
 .create-wrapper{
-    padding-inline: 6px;
+    padding-inline: 85px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.create-wrapper >.home-link{
+    max-width: 220px;
 }
 .create-title{
     font-family:var(--franc-family) ;
@@ -255,27 +261,14 @@ ul{
     color: #83888F;
     margin-bottom: 80px;
 }
-.create-line{
-    width: 100%;
-    display: flex;
-    align-items: center;
-}
-.circle{
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-    border: 2px solid var(--card-color);
-}
-.line{
-   width: 568px;
-   border: 1.5px solid #FDD6BA;
-}
+
 .creade-cards{
     display: flex;
     justify-content: center;
+    /* flex-wrap: wrap; */
     gap: 115px;
-    flex-wrap: wrap;
     margin: 62px 0px;
+    
 }
 .create-card{
     max-width: 345.82px;
@@ -358,6 +351,40 @@ ul{
         font-size: 15px;
         line-height: 25px;
     }
+    .about-content{
+        padding-inline: 20px;
+    }
+
+    .about-cards{
+        max-width: 100%;
+        flex-direction: column;
+    }
+    .about-card{
+        max-width: 100%;
+        display: flex;
+        gap: 50px;
+    }
+   .about-card-content{
+    text-align: left;
+   }
+}
+@media only screen and (max-width:768px){
+    
+    .coffee-wrapper{
+        flex-direction: column;
+        padding-inline: 24px;
+    }
+    .coffe-card{
+        max-width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom:0px;
+    }
+    .card-content{
+        text-align: left;
+        margin-bottom: 57px;
+    }
 }
 @media only screen and (max-width:700px){
     .burger{
@@ -371,6 +398,24 @@ ul{
     }
     #home{
         padding-inline: 24px;
+    }
+
+}
+@media only screen and (max-width:660px){
+    #about{
+    
+        padding: 53px 24px;
+    }
+    .about-cards{
+        justify-content: center;
+        align-items: center;
+    }
+    .about-card{
+        flex-direction: column;
+        max-width: 279px;
+    }
+    .about-card-content{
+        text-align: center;
     }
 }
 @media only screen and (max-width:526px){
@@ -390,5 +435,15 @@ ul{
         max-width: 100%;
         font-size: 15px;
         line-height: 25px;
+    }
+    .coffee-wrapper{
+        flex-wrap: wrap;
+    }
+    .coffe-card{
+        max-width: 282px;
+      flex-direction: column;
+    }
+    .card-content{
+        text-align: center;
     }
 }
